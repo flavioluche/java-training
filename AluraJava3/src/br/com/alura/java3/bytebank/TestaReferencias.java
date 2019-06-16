@@ -9,7 +9,8 @@ public class TestaReferencias {
 		g1.setSalario(5000.0);
 		g1.getBonificacao();
 		
-		Funcionario f1 = new Funcionario();
+		//era um funcionario antes de tornar a classe abstrata
+		Gerente f1 = new Gerente();
 		f1.setNome("Kleber");
 		f1.setSalario(2000.0);
 		f1.getBonificacao();
