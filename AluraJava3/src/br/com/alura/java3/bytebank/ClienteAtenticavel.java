@@ -1,23 +1,24 @@
 package br.com.alura.java3.bytebank;
 
-public class FuncionarioAutenticavel extends Funcionario {
-
-	@Override
-	public double getBonificacao() {
-		return 0;
-	}
+public class ClienteAtenticavel implements Autenticavel {
 
 	private int senha;
 	
+	@Override
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}
 
+	@Override
 	public boolean autentica(int senha) {
+		
 		if (this.senha == senha) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
+		
 	}
+	
+
 }

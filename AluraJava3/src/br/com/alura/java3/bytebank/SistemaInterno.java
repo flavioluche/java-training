@@ -3,7 +3,7 @@ package br.com.alura.java3.bytebank;
 public class SistemaInterno {
 	private int senha=2222;
 	
-	public void autentica(FuncionarioAutenticavel fa) {
+	public void autentica(Autenticavel fa) {
 		
 		boolean autenticou = fa.autentica(this.senha);
 			
