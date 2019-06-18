@@ -2,22 +2,21 @@ package br.com.alura.java3.bytebank;
 
 public class ClienteAtenticavel implements Autenticavel {
 
-	private int senha;
+	private AutenticacaoUtil autenticador;
+	
+	public ClienteAtenticavel() {
+		this.autenticador = new AutenticacaoUtil();
+	}
 	
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(int senha) {
 		
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-		
+		return this.autenticador.autentica(senha);
 	}
 	
 
