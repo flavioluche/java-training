@@ -6,7 +6,7 @@ public class Fluxo {
         System.out.println("Ini do main");
         try {
         	metodo1();
-        }catch (ArithmeticException | NullPointerException ex) {
+        }catch (ArithmeticException | NullPointerException | CustomException ex) {
         	System.out.println(ex.getMessage());
             ex.printStackTrace();
         }
@@ -24,7 +24,8 @@ public class Fluxo {
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
             Conta c = null;
-            c.deposita();
+            //c.deposita();
+            throw new CustomException("There is an error!");
         }
         System.out.println("Fim do metodo2");        
     }
