@@ -2,7 +2,11 @@ package ExceptionsJava;
 
 public class Conta {
 
-	void deposita() {
+	void deposita() throws CustomException{
+		
+	}
+	
+	void saca() {
 		
 	}
 }
