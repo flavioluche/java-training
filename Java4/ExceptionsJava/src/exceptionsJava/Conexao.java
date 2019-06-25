@@ -12,7 +12,7 @@ public class Conexao {
 	}
 	
 	public void fecha() {
-		System.out.println("Fechand conexão");
+		System.out.println("Fechando conexão");
 	}
 
 
