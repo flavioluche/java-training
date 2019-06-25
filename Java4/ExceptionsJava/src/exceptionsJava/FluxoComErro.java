@@ -1,4 +1,4 @@
-package ExceptionsJava;
+package exceptionsJava;
 
 public class FluxoComErro {
 	
