@@ -10,9 +10,24 @@ public abstract class Conta {
 	
 	public Conta(int agencia, int conta, int dac) {
 		
-		setAgencia(agencia);
-		setConta(conta);
-		setDac(dac);
+		if (agencia < 1) {
+			throw new IllegalStateException("Agência inválida");
+		} else {
+			setAgencia(agencia);
+		}
+		
+		if (conta < 1) {
+			throw new IllegalStateException("Conta inválida");
+		}else {
+			setConta(conta);
+		}
+		
+		if (dac < 1) {
+			throw new IllegalStateException("DAC inválido");
+		} else {
+			setDac(dac);
+		}
+		
 		Conta.total++;
 		System.out.println(getTotal() + " Nova conta Criada: " + getAgencia() + " " + getConta()+ "-" + getDac());
 	}

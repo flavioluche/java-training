@@ -4,9 +4,9 @@ public class TesteContas {
 
 	public static void main(String[] args) {
 		
-		ContaCorrente ccorrente = new ContaCorrente(1500, 12345, 4);
+		ContaCorrente ccorrente = new ContaCorrente(-1500, 12345, 4);
 		
-		ContaPoupanca cpoupanca = new ContaPoupanca(1500, 12345, 500);
+		ContaPoupanca cpoupanca = new ContaPoupanca(1500, -12345, 500);
 		
 		ccorrente.deposita(200);
 		cpoupanca.deposita(150);
