@@ -1,6 +1,6 @@
 package exceptionsJava;
 
-public class Conexao {
+public class Conexao implements AutoCloseable {
 		
 	public Conexao() {
 		System.out.println("Abrindo a conexão");
@@ -10,9 +10,11 @@ public class Conexao {
 		System.out.println("Recebendo Dados");
 		throw new IllegalStateException();
 	}
-	
-	public void fecha() {
+
+	@Override
+	public void close() {
 		System.out.println("Fechando conexão");
+		
 	}
 
 
